@@ -1,6 +1,13 @@
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import React from 'react'
+import { Metadata } from 'next'
+
+export const generateMetadata = ({ params } : { params : {id: string}}) : Metadata => {
+  return {
+    title: `produit n° ${params.id}`
+  }
+}
 
 const ProductDetails = ({
     params
