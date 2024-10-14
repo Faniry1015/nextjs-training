@@ -1,11 +1,15 @@
 import Link from 'next/link'
+import { notFound } from 'next/navigation'
 import React from 'react'
 
 const ProductDetails = ({
     params
 } : {
-    params : {id: string}
+    params : { id: string }
 }) => {
+  if (Number(params.id) > 50) {
+    notFound()
+  }
   return (
     <>
     <h1>Article n° {params.id}</h1>
