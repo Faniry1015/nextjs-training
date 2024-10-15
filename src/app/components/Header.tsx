@@ -28,7 +28,7 @@ const Header = () => {
     <div style={{backgroundColor: 'lightblue'}}>
         <ul style={{display: 'flex'}}>
             {navLinks.map((item, k) => {
-                return <li key={k} style={{padding: '5px'}} ><Link href={item.href} className={pathname.startsWith(item.href) ? 'text-green-200' : 'text-blue-100'}>{item.label}</Link></li>
+                return <li key={k} style={{padding: '5px'}} ><Link href={item.href} className={pathname.startsWith(item.href) ? 'text-yellow-600' : 'text-black hover:text-red-500'}>{item.label}</Link></li>
             })}
         </ul>
     </div>
