@@ -2,7 +2,11 @@ import { articles } from "@/app/data";
 import Link from "next/link";
 import React from "react";
 
-const page = () => {
+export const metadata = {
+  title: 'Faniry R - Blog'
+}
+
+const BlogHome = () => {
   return articles.map((article) => {
     return (
       <>
@@ -13,4 +17,4 @@ const page = () => {
   });
 };
 
-export default page;
+export default BlogHome;
