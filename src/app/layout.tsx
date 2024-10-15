@@ -12,11 +12,11 @@ export default function RootLayout({
     <html lang="fr">
       <body>
         <header>
-          <h1>HEADER</h1>
+          <h2>Faniry Blog</h2>
         </header>
         <main>{children}</main>
         <footer>
-          <h1>FOOTER</h1>
+          <h3>FOOTER</h3>
         </footer>
       </body>
     </html>
