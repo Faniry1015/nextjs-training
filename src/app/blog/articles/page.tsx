@@ -1,15 +1,18 @@
+'use client'
 import { articles } from "@/app/data";
 import Link from "next/link";
 import React from "react";
-
-export const metadata = {
-  title: "Faniry R - Blog",
-};
+import { useRouter } from "next/navigation";
 
 const BlogHome = () => {
+  const router = useRouter()
+  const backToBlog = () => {
+    console.log("retour au blog")
+    router.back() //Revenir en arrière(lien précédent)
+  }
   return (
     <>
-    <h4><Link href='../blog'>Retour au blog</Link></h4>
+    <button onClick={backToBlog}>Retour au blog</button>
       {articles.map((article) => {
         return (
           <div key={article.id}>

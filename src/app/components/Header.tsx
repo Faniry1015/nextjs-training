@@ -25,10 +25,10 @@ const navLinks = [
 const Header = () => {
     const pathname = usePathname()
   return (
-    <div>
-        <ul>
+    <div style={{backgroundColor: 'lightblue'}}>
+        <ul style={{display: 'flex'}}>
             {navLinks.map((item, k) => {
-                return <li key={k} ><Link href={item.href} className={pathname.startsWith(item.href) ? 'text-green-200' : 'text-blue-100'}>{item.label}</Link></li>
+                return <li key={k} style={{padding: '5px'}} ><Link href={item.href} className={pathname.startsWith(item.href) ? 'text-green-200' : 'text-blue-100'}>{item.label}</Link></li>
             })}
         </ul>
     </div>

@@ -16,7 +16,7 @@ export default function RootLayout({
         <Header />
         <main>{children}</main>
         <footer>
-          <h3>FOOTER</h3>
+          <h3 style={{backgroundColor: 'lightblue'}}>FOOTER</h3>
         </footer>
       </body>
     </html>
