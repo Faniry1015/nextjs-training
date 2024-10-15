@@ -1,3 +1,5 @@
+import Header from "./components/Header";
+
 export const metadata = {
   title: "Next training",
   description: "Created by Faniry",
@@ -11,9 +13,7 @@ export default function RootLayout({
   return (
     <html lang="fr">
       <body>
-        <header>
-          <h2>Faniry Blog</h2>
-        </header>
+        <Header />
         <main>{children}</main>
         <footer>
           <h3>FOOTER</h3>
