@@ -17,6 +17,9 @@ const navLinks = [
     }, {
         label: 'Contact',
         href: '/contact'
+    }, {
+        label: 'APIGETPOST',
+        href: '/getpostfront'
     }
     
 ]
