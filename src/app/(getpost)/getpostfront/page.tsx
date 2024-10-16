@@ -8,12 +8,12 @@ interface Item {
 const GetPost = () => {
     const [items, setItems] = useState<Item[]>([])
 
-  const getData = async () => {
+  const fetchData = async () => {
     try {
       const res = await fetch("/getpostroute");
       const articles = await res.json()
       setItems(articles) 
-      console.log(articles)
+
     } 
     catch (error) {
       console.log(error);
@@ -21,7 +21,7 @@ const GetPost = () => {
   };
 
   useEffect(() => {
-    getData()
+    fetchData()
   }, [])
   
   return <div>

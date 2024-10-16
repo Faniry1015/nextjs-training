@@ -1,8 +1,12 @@
 import React from 'react'
 import { getData } from './data'
+import { NextRequest } from 'next/server'
 
-export const GET = async () => {
-    return Response.json(getData)
+export const GET = async (request: NextRequest) => {
+    const searchParam = request.nextUrl.searchParams
+    const query = searchParam.get('search')
+    const filteredData = query ? getData.find(art => art.label.includes(query)) : getData
+    return Response.json(filteredData)
 }
 
 export const POST = async (request: Request) => {
