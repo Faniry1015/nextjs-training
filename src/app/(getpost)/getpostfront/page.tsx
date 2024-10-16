@@ -1,8 +1,12 @@
 "use client"
 import React, { useEffect, useState } from "react";
+interface Item {
+    id: number,
+    label: string,
+}
 
 const GetPost = () => {
-    const [items, setItems] = useState([])
+    const [items, setItems] = useState<Item[]>([])
 
   const getData = async () => {
     try {
@@ -22,7 +26,7 @@ const GetPost = () => {
   
   return <div>
     <ul>
-        {items.map((item, k) => <li key={k}>{item.label}</li>)}
+        {items.map((item) => <li key={item.id}>{item.label}</li>)}
     </ul>
   </div>;
 };
