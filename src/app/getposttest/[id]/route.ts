@@ -9,6 +9,13 @@ export const PATCH = async (request: Request, {params} : {params: {id: string}})
     const newLabel = res.label
     const index = getData.findIndex(art => art.id === parseInt(params.id))
     getData[index].label = newLabel
-    
+
     return Response.json(getData[index])
+}
+
+export const DELETE = (request: Request, {params}: {params: {id: string}}) => {
+    const index = getData.findIndex(art => art.id === parseInt(params.id))
+    getData.splice(index, 1)
+
+    return Response.json(getData)
 }
