@@ -24,3 +24,12 @@ export const POST = async (request: Request) => {
         status: 201
     })
 }
+
+export const PATCH = async (request: Request, {params}: {params: {id: string}}) => {
+    const body = await request.json()
+    const label = body.label 
+    const index = getData.findIndex(article => article.id === parseInt(params.id)) 
+    getData[index].label = label
+
+    return Response.json(getData[index])
+}
